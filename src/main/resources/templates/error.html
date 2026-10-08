@@ -10,6 +10,7 @@
 	<h1 th:text="|Error ${status}|">Error</h1>
 	<p>your marker</p>
 	<p>La ruta <code th:text="${path}">desconocida</code> no está disponible.</p>
+	<p>Hora del servidor: <span th:text="${@timeService.now()}">--:--</span></p>
 </main>
 </body>
 </html>
