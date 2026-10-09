@@ -25,9 +25,10 @@ kotlin {
     }
 }
 
-val mockitoAgent = configurations.create("mockitoAgent") {
-    isCanBeConsumed = false
-}
+val mockitoAgent =
+    configurations.create("mockitoAgent") {
+        isCanBeConsumed = false
+    }
 
 dependencies {
     val springBootVersion = libs.versions.springBoot.get()
@@ -44,6 +45,7 @@ dependencies {
     testImplementation(libs.spring.boot.starter.webmvc.test)
     testImplementation(libs.spring.boot.restclient)
     testImplementation(libs.spring.boot.resttestclient)
+    testImplementation("org.apache.httpcomponents.client5:httpclient5")
     mockitoAgent("org.mockito:mockito-core") {
         isTransitive = false
     }

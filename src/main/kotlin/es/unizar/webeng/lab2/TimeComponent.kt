@@ -1,11 +1,13 @@
 package es.unizar.webeng.lab2
 
-import java.time.LocalDateTime
 import org.springframework.stereotype.Service
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
+import java.time.LocalDateTime
 
-data class TimeDTO(val time: LocalDateTime)
+data class TimeDTO(
+    val time: LocalDateTime,
+)
 
 interface TimeProvider {
     fun now(): LocalDateTime
