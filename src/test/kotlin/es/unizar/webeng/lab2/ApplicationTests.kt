@@ -39,6 +39,7 @@ class ErrorPageTest {
             )
         assertEquals(HttpStatus.NOT_FOUND, response.statusCode)
         assertTrue(response.body!!.contains("your marker"))
+        assertTrue(response.body!!.contains("/missing"))
     }
 
     @Test
